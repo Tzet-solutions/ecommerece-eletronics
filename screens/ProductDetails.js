@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   Image,
   ScrollView,
+  Pressable 
 } from "react-native";
 import {React, useState} from "react";
 import { useRoute } from "@react-navigation/native";
@@ -21,6 +22,7 @@ import { Colors } from "react-native/Libraries/NewAppScreen";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../redux/CartReducer";
 import { addTofavorite } from "../redux/FavorateReducer";
+import { Button } from "react-native-web";
 
 const ProductDetails = () => {
   const route = useRoute();
@@ -114,6 +116,12 @@ const ProductDetails = () => {
           </View>
         </View>
 
+        <Pressable style={styles.button} onPress={()=>{}}>
+      <Text style={styles.text}>VIEW 3D</Text>
+    </Pressable>
+
+
+
         <Text
           style={{
             fontFamily: "bold",
@@ -124,6 +132,10 @@ const ProductDetails = () => {
           >
           Description
         </Text>
+   
+
+
+
 
         <Text
           style={{
@@ -254,6 +266,22 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.offwhite,
     borderTopLeftRadius: SIZES.medium,
     borderTopRightRadius: SIZES.medium,
+  },
+  button: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 12,
+    paddingHorizontal: 32,
+    borderRadius: 4,
+    elevation: 3,
+    backgroundColor: 'black',
+  },
+  text: {
+    fontSize: 16,
+    lineHeight: 21,
+    fontWeight: 'bold',
+    letterSpacing: 0.25,
+    color: 'white',
   },
   titleRow: {
     marginTop: SIZES.small,

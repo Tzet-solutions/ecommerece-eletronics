@@ -30,9 +30,9 @@ export default function Home() {
   const [selectedAddress, setSelectedAdress] = useState(addresses[0]);
   const { userId} = useContext(UserType);
   const updateProducts = async () => {
-    setLoading(true);
+    setLoading(false);
     let response = await axios.get(
-      `http://192.168.0.106:5000/api/admin/fetchallitems`
+      `http://192.168.56.1:5000/api/admin/fetchallitems`
     );
     let parsedData = response.data;
     setProducts(parsedData);
@@ -44,7 +44,7 @@ export default function Home() {
     const userId = decodedtoken.user.id;
     AsyncStorage.setItem('userId',userId)
     await axios
-      .get(`http://192.168.0.106:5000/api/shop/addresses/${userId}`)
+      .get(`http://192.168.56.1:5000/api/shop/addresses/${userId}`)
       .then((response) => {
         if ((response.status = 200)) {
           setAddresses(response.data);
@@ -61,25 +61,25 @@ export default function Home() {
       img: "https://aveade.com/images/detailed/1/Telcom-n-electronics-01-1.png",
     },
     {
-      title: "jewelery",
+      title: "boards",
       img: "https://sc04.alicdn.com/kf/H355e8a47560a4342a49a9a62de887760I.jpg",
     },
     {
-      title: "men's clothing",
+      title: "laptop",
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe7DJ3yUic0QRnzgmVFJNrJlHZtA-zZQ2Ypg&usqp=CAU",
     },
     {
-      title: "women's clothing",
+      title: "gadgets",
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd8pRz0pah1f9cv_2CIG1S--lKdtCtFKAR4nVeJa_GwRmaFZ1uPe4YeAAb1pFpspSKY9E&usqp=CAU",
     },
   ];
   const firstCap = (str) => {
     return str.charAt(0).toUpperCase() + str.slice(1);
   };
-  useEffect(() => {
-    updateProducts();
-    getAddress();
-  }, []);
+  // useEffect(() => {
+  //   updateProducts();
+  //   getAddress();
+  // }, []);
   
   return (
     <>

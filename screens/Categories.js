@@ -7,9 +7,9 @@ export default function Categories() {
   const navigation = useNavigation();
   const categories = [
     {title:"electronics",img:'https://aveade.com/images/detailed/1/Telcom-n-electronics-01-1.png'},
-    {title:"jewelery",img:'https://sc04.alicdn.com/kf/H355e8a47560a4342a49a9a62de887760I.jpg'},
-    {title:"men's clothing",img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe7DJ3yUic0QRnzgmVFJNrJlHZtA-zZQ2Ypg&usqp=CAU'},
-    {title:"women's clothing",img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd8pRz0pah1f9cv_2CIG1S--lKdtCtFKAR4nVeJa_GwRmaFZ1uPe4YeAAb1pFpspSKY9E&usqp=CAU'}
+    {title:"Boards",img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTILOwBVtFL8P7OkFp9pwNj74QtRUr1cbox4Q&usqp=CAU'},
+    {title:"Laptop",img:'https://static.toiimg.com/thumb/msid-96886626,width-400,resizemode-4/96886626.jpg'},
+    {title:"Gadgets",img:'https://www.wonderlab.org/wp-content/uploads/2020/12/7.jpg'}
   ];
  
   return (
