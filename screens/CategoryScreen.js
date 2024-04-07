@@ -25,7 +25,7 @@ export default function CategoryScreen() {
   };
 
   useEffect(() => {
-    updateProducts();
+    // updateProducts();
   }, []);
   const firstCap = (str) => {
     return str.charAt(0).toUpperCase() + str.slice(1);

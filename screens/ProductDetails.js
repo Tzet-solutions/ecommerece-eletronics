@@ -116,7 +116,7 @@ const ProductDetails = () => {
           </View>
         </View>
 
-        <Pressable style={styles.button} onPress={()=>{}}>
+        <Pressable style={styles.button} onPress={()=>{navigation.navigate("View3d");}}>
       <Text style={styles.text}>VIEW 3D</Text>
     </Pressable>
 

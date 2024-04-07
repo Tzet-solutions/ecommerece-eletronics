@@ -13,6 +13,7 @@ import FavoritiesScreen from "./FavoritiesScreen";
 import AddressScreen from './AddressScreen'
 import ConfirmOrderScreen from "./ConfirmOrderScreen";
 import OrdersScreen from "./OrdersScreen";
+import View3d from "./View3d";
 
 export default function ScreensNav() {
   const [fontsloaded]=useFonts({
@@ -88,6 +89,11 @@ export default function ScreensNav() {
           <Stack.Screen
             name="OrdersScreen"
             component={OrdersScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="View3d"
+            component={View3d}
             options={{ headerShown: false }}
           />
         </Stack.Navigator>
